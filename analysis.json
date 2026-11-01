@@ -1,0 +1,8 @@
+{
+  "eda_ukuran": "Dari 2007 file, lebar rata-rata 1183px (min 32, maks 6144); tinggi rata-rata 863px (min 32, maks 4378). Mode warna: {'RGB': 1971, 'P': 18, 'RGBA': 15, 'L': 3}. File rusak: 0. Karena ukuran tidak seragam dan mode warna bisa bercampur (grayscale/RGBA/palette), semua gambar di-resize ke 160x160 dan dibaca sebagai RGB.",
+  "eda_contoh": "Contoh visual tiap kelas menunjukkan variasi sudut pandang, pencahayaan (air laut cenderung kebiruan/kehijauan), latar belakang, dan ukuran objek. Kelas dengan bentuk mirip (mis. Fish vs Shark, Coral vs Sponges) berpotensi saling tertukar, sehingga augmentasi data dipakai untuk menambah variasi. Angka dalam kurung adalah jumlah gambar berlabel.",
+  "kurva": "Training berjalan 10 epoch (fase 1: 5, fase 2: 5). Akurasi akhir train 27.27% vs validasi 5.26%. Gap train-validasi besar -> indikasi overfitting. Loss yang turun lalu mendatar menandakan model sudah konvergen; garis putus-putus menandai awal fine-tuning. Akurasi train bisa tampak lebih rendah dari validasi karena augmentasi & dropout aktif saat training.",
+  "metrik": "Akurasi 15.00% (masih rendah). Macro F1 11.90% menunjukkan keseimbangan precision (10.42%) dan recall (14.58%) antar kelas. Kelas paling mudah dikenali: 'Shark' (F1 0.33); paling sulit: 'Coral' (F1 0.00). Weighted F1 sebesar 12.62%.",
+  "confusion_matrix": "Diagonal utama = prediksi benar. Kesalahan terbanyak: 'Crustaceans' diprediksi sebagai 'Fish' (2 gambar), kemungkinan karena kemiripan visual. Kelas dengan recall terendah adalah 'Coral' (0.00).",
+  "prediksi": "Dari 12 gambar uji, 1 diprediksi benar (judul hijau) dan 11 salah (merah). Persentase di judul adalah confidence model; prediksi salah dengan confidence tinggi menandakan kelas yang sangat mirip secara visual."
+}
