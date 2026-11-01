@@ -25,6 +25,11 @@ OUT_DIR = "output_oceaniclife"
 MODEL_PATH = os.path.join(
     OUT_DIR, "final_marine_cnn_model.keras"
 )
+print("Lokasi model:", os.path.abspath(MODEL_PATH))
+print("File model ditemukan:", os.path.exists(MODEL_PATH))
+
+print("Lokasi model:", os.path.abspath(MODEL_PATH))
+print("File model ditemukan:", os.path.exists(MODEL_PATH))
 
 METRICS_PATH = os.path.join(OUT_DIR, "metrics.json")
 HISTORY_PATH = os.path.join(OUT_DIR, "history.json")
